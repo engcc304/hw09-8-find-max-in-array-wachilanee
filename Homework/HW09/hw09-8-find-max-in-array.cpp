@@ -41,3 +41,39 @@
         Array: 6 7 11 13 15 49 27 18
         The large 3rd element = 18
 */
+ #include <stdio.h>
+
+ int main() {
+    
+    int N, num[ 100 ], i, j, hold = 0 ;
+
+    printf( "Enter new element of Array : " ) ;
+    scanf( "%d", &N ) ;
+
+    for ( i = 0 ; i < N ; i++ ) {
+        printf( "Input : " ) ;
+        scanf( "%d", &num[ i ] ) ;
+    }
+
+    printf("Array:") ;
+    for ( i = 0 ; i < N ; i++ ) {
+        printf( " %d", num[ i ] ) ;
+    }
+
+    for ( i = 0 ; i < N ; i++ ) {
+        for ( j = i + 1 ; j < N ; j++ ) {
+            if ( num[ i ] < num[ j ]  ) {
+                hold = num[ i ] ;
+                num[ i ] = num[ j ] ;
+                num[ j ] = hold ;
+            }
+        }
+    }
+
+    printf( "\nThe large 3rd element = %d", num[ 2 ] ) ;
+    
+    
+    
+    return 0;
+ }
+ 
