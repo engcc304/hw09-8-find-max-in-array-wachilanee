@@ -55,9 +55,9 @@
         scanf( "%d", &num[ i ] ) ;
     }
 
-    printf("Array: ") ;
+    printf("Array:") ;
     for ( i = 0 ; i < N ; i++ ) {
-        printf( "%d ", num[ i ] ) ;
+        printf( " %d", num[ i ] ) ;
     }
 
     for ( i = 0 ; i < N ; i++ ) {
